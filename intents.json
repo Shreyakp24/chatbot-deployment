@@ -4,80 +4,122 @@
       "tag": "greeting",
       "patterns": [
         "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
         "Hello",
-        "Good day"
+        "Is anyone there?",
+        "Good morning",
+        "Good evening",
+        "Hey",
+        "Greetings"
       ],
       "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
+        "Hello! How can I assist you with your movie booking today?",
+        "Hi there! Need help with your movie plans?",
+        "Greetings! How can I help you?"
       ]
     },
     {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
-    },
-    {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
-      "tag": "items",
+      "tag": "book_movie",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
+        "I want to book a movie",
+        "Can you help me book tickets for a movie?",
+        "How do I book a movie ticket?",
+        "Book a ticket for me",
+        "Reserve a seat for a movie"
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        "Sure! Which movie would you like to watch?",
+        "I'd be happy to help! Can you tell me the movie name and showtime?",
+        "Of course! Please provide the movie title, date, and time you'd like to book."
+      ],
+      "context": ["booking"]
+    },
+    {
+      "tag": "movie_list",
+      "patterns": [
+        "What movies are playing?",
+        "What movies are there currently?",
+        "List of movies available",
+        "Show me the movies I can book",
+        "Which movies are running now?",
+        "Can you tell me what's on in theaters?"
+      ],
+      "responses": [
+        "Here are the movies currently playing: \n1. The Grand Adventure \n2. Space Odyssey \n3. Mystery of the Night \n4. Comedy Carnival",
+        "Currently available movies: \n 1. The Grand Adventure \n 2. Space Odyssey \n 3. Mystery of the Night \n4. Comedy Carnival \nLet me know which one you'd like to watch."
       ]
     },
     {
-      "tag": "payments",
+      "tag": "show_timings",
       "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
+        "What are the show timings for The Grand Adventure?",
+        "Can you tell me the timings for Space Odyssey?",
+        "When is Mystery of the Night playing?",
+        "Showtimes for Comedy Carnival",
+        "When is the next show for The Grand Adventure?",
+        "When is the next show for comedy Carnival?",
+        "When is the next show for Space Odyssey?"
       ],
       "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        "The show timings are: \n1. 10:00 AM \n2. 1:00 PM \n3. 4:00 PM \n4. 7:00 PM",
+        "This movie is playing at these times: 10:00 AM, 1:00 PM, 4:00 PM, and 7:00 PM."
       ]
     },
     {
-      "tag": "delivery",
+      "tag": "cancellation",
       "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
+        "I want to cancel my booking",
+        "How do I cancel a ticket?",
+        "Cancel my movie ticket",
+        "Can you help me cancel my reservation?",
+        "I need to cancel my ticket for The Grand Adventure"
       ],
       "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
+        "I'm sorry to hear that. Can you provide your booking ID or the details of the reservation you'd like to cancel?",
+        "Sure, please provide the booking ID or the email associated with the reservation, and I'll assist with the cancellation."
+      ],
+      "context": ["cancellation"]
+    },
+    {
+      "tag": "refund_policy",
+      "patterns": [
+        "Do I get my refund?",
+        "What is your refund policy?",
+        "Will I get a refund if I cancel my ticket?",
+        "Can you tell me about the refund process?",
+        "How long does it take to process refunds?",
+        "Do you refund for cancellations?"
+      ],
+      "responses": [
+        "Our refund policy states that cancellations made within 24 hours of the booking are fully refundable. Refunds for cancellations made after this period may be subject to deductions. Refunds are processed within 5-7 business days.",
+        "Refunds are issued for cancellations made up to 24 hours before the showtime. Refunds take 5-7 business days to reflect in your account."
       ]
     },
     {
-      "tag": "funny",
+      "tag": "payment_query",
       "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
+        "What payment methods do you accept?",
+        "Can I pay using PayPal?",
+        "Do you accept credit cards?",
+        "How can I pay for the tickets?",
+        "Payment options available?"
       ],
       "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        "We accept the following payment methods: Credit/Debit cards, PayPal, UPI, and Net Banking.",
+        "You can pay using Credit/Debit cards, PayPal, UPI, or Net Banking. Let us know if you face any issues!"
+      ]
+    },
+    {
+      "tag": "farewell",
+      "patterns": [
+        "Thank you",
+        "Thanks for your help",
+        "Bye",
+        "Goodbye",
+        "See you later"
+      ],
+      "responses": [
+        "You're welcome! Have a great day!",
+        "Goodbye! Let us know if you need further assistance."
       ]
     }
   ]
